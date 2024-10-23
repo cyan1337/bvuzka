@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Użycie flexboxa do układu */
+    justify-content: center; /* Wyśrodkowanie w poziomie */
+    align-items: flex-start; /* Wyśrodkowanie w pionie */
+    background-color: #000000; /* Kolor tła */
+    flex-direction: column;
+}
+
+.container {
+    display: flex; /* Użycie flexboxa do układu wewnętrznego */
+}
+
+.gallery {
+    margin-right: 50px; /* Odstęp między galerią a listą */
+}
+
+.gallery h1 {
+    text-align: center; /* Wyśrodkowanie nagłówka w galerii */
+}
+
+.image {
+    width: 300px; /* Ustawienie szerokości obrazków */
+    height: 300px; /* Ustawienie automatycznej wysokości */
+    cursor: pointer; /* Zmiana kursora na wskaźnik */
+    margin: 10px; /* Odstęp między obrazkami */
+    border: 2px solid transparent; /* Przezroczyste obramowanie */
+    transition: border-color 0.3s; /* Efekt przejścia dla koloru obramowania */
+}
+
+.image:hover {
+    border-color: #ff00ea; /* Kolor obramowania po najechaniu */
+}
+
+.selected-items {
+    width: 200px;
+    background-color: #ff00ea; /* Kolor tła dla listy */
+    padding: 5px; /* Wypełnienie wewnętrzne */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Cień dla listy */
+}
+
+.selected-items h2 {
+    text-align: center; /* Wyśrodkowanie nagłówka w liście */
+}
+
+#itemList {
+    list-style-type: none; /* Usunięcie punktów z listy */
+    padding: 0; /* Usunięcie wypełnienia */
+}
+h1{
+    color:#ff00ea;
+}
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+margin: 0 auto;
+}
+button:hover {
+    background-color: #F54DD2;
+}

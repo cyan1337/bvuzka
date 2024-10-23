@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>;))))))))</title>
+    <link rel="stylesheet" href="css3.css"> <!-- Link do pliku CSS -->
+</head>
+<body>
+    <div class="container">
+        <div id="heartsTopTOPContainer"></div>
+        <h1>JAK BARDZO SIE CIESZYSSZZZZ</h1>
+        <div id="heartsTopContainer"></div>
+        <form>
+            <label for="cieszynka">aaAaaAAAaAAAaaaa!@@!!@ <--- doslownie ty rn</label>
+            <input type="range" id="cieszynka" name="cieszynka" min="0" max="100" value="0">
+            <span id="cieszynkaValue">0</span> 
+            
+            <br><br>
+            
+            <div id="heartsContainer"></div> <!-- Kontener na serduszka -->
+            
+            <br>
+            
+            <div class="buttons">
+                <button type="button" onclick="location.href='jedzenie.html'">DALEJEJJJJ!!!!!</button>
+            </div>
+        </form>
+    </div>
+    
+    <script>
+        // Aktualizacja wartości suwaka
+        const volumeSlider = document.getElementById('cieszynka');
+        const cieszynkaValue = document.getElementById('cieszynkaValue');
+        const heartsContainer = document.getElementById('heartsContainer');
+        
+        volumeSlider.addEventListener('input', function() {
+            const value = this.value;
+            cieszynkaValue.textContent = value; // Wyświetlenie aktualnej wartości suwaka
+            
+            // Aktualizacja serduszek
+            heartsContainer.innerHTML = ''; // Resetowanie kontenera z serduszkami
+            for (let i = 0; i < value; i++) {
+                heartsContainer.innerHTML += '❤️'; // Dodanie serduszka
+            }
+            heartsTopContainer.innerHTML = ''; // Resetowanie kontenera z serduszkami
+            for (let i = 0; i < value; i++) {
+                heartsTopContainer.innerHTML += '❤️❤️'; // Dodanie serduszka
+            }
+            heartsTopTOPContainer.innerHTML = ''; // Resetowanie kontenera z serduszkami
+            for (let i = 0; i < value; i++) {
+                heartsTopContainer.innerHTML += '❤️❤️'; // Dodanie serduszka
+            }
+        });
+    </script>
+</body>
+</html>

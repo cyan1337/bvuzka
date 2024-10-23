@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jedzonko</title>
+    <link rel="stylesheet" href="css4.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gallery">
+            <h1>CO BEDZIEMY JESCCC</h1>
+            <img src="pizza.png" alt="Obrazek 1" class="image" data-title="pizzunia peperoni classic">
+            <img src="chinczyk.jpg" alt="Obrazek 2" class="image" data-title="jakis chinczyk (moze nie pies)">
+            <img src="razem.jpg" alt="Obrazek 3" class="image" data-title="cos sobie razem ugotujemy">
+            <img src="zelki.jfif" alt="Obrazek 4" class="image" data-title="zelki pileczki">
+            <img src="nikola.jfif" alt="Obrazek 5" class="image" data-title="ciebie bby">
+            <img src="kuba.jfif" alt="Obrazek 5" class="image" data-title="mnie tez ;P">
+            <img src="kebab.png" alt="Obrazek 6" class="image" data-title="kebsik (nie makkwak)">
+            <img src="kanapka.jpg" alt="Obrazek 6" class="image" data-title="domowa kanapeczka">
+            <img src="owocki.jpg" alt="Obrazek 6" class="image" data-title="owocki (doslownie tylko winogrona)">
+            <img src="burgir.png" alt="Obrazek 6" class="image" data-title="burgir">
+            
+        </div>
+        <div class="selected-items">
+            <h2>co zjem ja albo ty albo my</h2>
+            <ul id="itemList"></ul> <!-- Lista wybranych obrazków -->
+        </div>
+
+    </div>
+    <div class="buttons">
+        <button type="button" onclick="location.href='koncowka.html'">DALEJEJJJJ!!!!!</button>
+    </div>
+
+    <script>
+        // Funkcja dodająca obrazek do listy
+        function addImageToList(imageTitle) {
+            const itemList = document.getElementById('itemList');
+            const listItem = document.createElement('li');
+            listItem.textContent = imageTitle; // Ustawia tekst na tytule obrazka
+            itemList.appendChild(listItem); // Dodaje element do listy
+        }
+
+        // Dodawanie zdarzenia kliknięcia do wszystkich obrazków
+        const images = document.querySelectorAll('.image');
+        images.forEach(image => {
+            image.addEventListener('click', function() {
+                const imageTitle = this.getAttribute('data-title'); // Pobieranie tytułu obrazka
+                addImageToList(imageTitle); // Wywołanie funkcji dodającej obrazek do listy
+            });
+        });
+    </script>
+</body>
+</html>
